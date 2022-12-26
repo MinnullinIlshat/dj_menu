@@ -1,5 +1,7 @@
-{% extends 'whitelabel.html' %}
+{% extends 'base.html' %}
+{% load common_tags %}
 
-{% block whitelabel %}
+{% block content %}
+{% draw_menu 'main_menu' 'Forex CRM' %}
 <h1>Forex CRM</h1>
-{% endblock whitelabel %}
+{% endblock content %}

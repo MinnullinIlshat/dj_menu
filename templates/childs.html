@@ -1,9 +1,7 @@
 <ui class="menu">
-    {% for item in menu_items %}
-        {% if item.url is not None %}
-        <li><a href="{{ item.url }}">{{ item.name }}</a></li>
-        {% else %}
-        <li><a href="">{{ item.name }}</a></li>
-        {% endif %}
-    {% endfor %}
+{% for child in childs %}
+  <li>
+    <a style="margin-left: {{child.lvl}}0px" href="{{ child.url }}">{{ child.name }}</a>
+  </li>
+{% endfor %}
 </ul>

@@ -20,4 +20,16 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('whitelabel/', TemplateView.as_view(template_name='whitelabel.html'), name='whitelabel'),
+    path('forex/', TemplateView.as_view(template_name='forex_crm.html'), name='forex'),
+    path('crm/', TemplateView.as_view(template_name='crm.html'), name='crm'),
+    path('office/', TemplateView.as_view(template_name='office.html'), name='office'),
+    path('wbft/', TemplateView.as_view(template_name='wbft.html'), name='wbft'),
+    path('test_one/', TemplateView.as_view(template_name='test_one.html'), name='test_one'),
+    path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
+    path('contacts/', TemplateView.as_view(template_name='contacts.html'), name='contacts'),
+    path('news/', TemplateView.as_view(template_name='news.html'), name='news'),
+    path('services/', TemplateView.as_view(template_name='services.html'), name='services'),
+    path('legal/', TemplateView.as_view(template_name='legal_services.html'), name='legal'),
+    path('liqudity/', TemplateView.as_view(template_name='liquidity.html'), name='liquidity'),
 ]

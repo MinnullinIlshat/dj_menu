@@ -10,9 +10,16 @@ def draw_menu(menu_name, tp=None, lvl=None, pos=None):
     }
     return menu_collection[menu_name](tp, lvl, pos)
 
-
 def main_menu(tp, lvl, pos):
-    menu_items = Menu.objects.all() 
+    menu_items = Menu.objects.all()
+    if not tp: menu_items = menu_items.filter(lvl=0)
+    return {
+        "menu_items": menu_items,
+    }
+
+@register.inclusion_tag('childs.html')
+def get_first_childs():
+    menu_items = Menu.objects.all().filter(top_position=0).filter(lambda x: x.lvl > 0)
     return {
         "menu_items": menu_items,
     }

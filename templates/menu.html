@@ -2,7 +2,11 @@
 
 <ui class="menu">
 {% for item in menu_items %}
-  <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+  {% if item == obj %}
+    <b><li><a href="{{ item.url }}">{{ item.name }}</a></li></b>
+  {% else %}
+    <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+  {% endif %}
   {% if item.top_position == obj.top_position %}
     {% get_childs obj.name %}
   {% endif %}

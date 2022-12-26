@@ -1,7 +1,11 @@
 <ui class="menu">
 {% for child in childs %}
   <li>
+    {% if child == menu_obj %}
+    <b><a style="margin-left: {{child.lvl}}0px" href="{{ child.url }}">{{ child.name }}</a></b>
+    {% else %}
     <a style="margin-left: {{child.lvl}}0px" href="{{ child.url }}">{{ child.name }}</a>
+    {% endif %}
   </li>
 {% endfor %}
 </ul>

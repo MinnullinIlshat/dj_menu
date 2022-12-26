@@ -26,7 +26,7 @@ urlpatterns = [
     path('office/', TemplateView.as_view(template_name='office.html'), name='office'),
     path('wbft/', TemplateView.as_view(template_name='wbft.html'), name='wbft'),
     path('test_one/', TemplateView.as_view(template_name='test_one.html'), name='test_one'),
-    path('test_two/', TemplateView.as_view(template_name='test_one.html'), name='test_two'),
+    path('test_two/', TemplateView.as_view(template_name='test_two.html'), name='test_two'),
     path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
     path('contacts/', TemplateView.as_view(template_name='contacts.html'), name='contacts'),
     path('news/', TemplateView.as_view(template_name='news.html'), name='news'),
